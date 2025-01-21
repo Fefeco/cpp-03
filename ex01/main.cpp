@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 11:16:52 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/01/16 11:18:20 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/01/21 13:33:42 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 
 int main(void) {
 	ScavTrap ply1("Robot");
+	ScavTrap ply2(ply1);
 
-	ply1.attack(2);
+	std::cout << "Ply1 Energy: " << ply1.getEnergyPoints() << std::endl;
 	return 0;
 }

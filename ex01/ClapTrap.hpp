@@ -6,7 +6,7 @@
 /*   By: fedeito <fcarranz@student.42barcel>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 20:23:31 by fedeito           #+#    #+#             */
-/*   Updated: 2025/01/15 21:34:31 by fedeito          ###   ########.fr       */
+/*   Updated: 2025/01/21 12:57:53 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ public:
 
   void setAttackDamage(unsigned int points);
 
-private:
+protected:
   std::string _name;
   unsigned int _hitPoints;
   unsigned int _energyPoints;

@@ -6,11 +6,11 @@
 #    By: fcarranz <fcarranz@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/24 10:12:56 by fcarranz          #+#    #+#              #
-#    Updated: 2025/01/16 11:19:20 by fcarranz         ###   ########.fr        #
+#    Updated: 2025/01/21 12:58:44 by fcarranz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME=ex00
+NAME=ex01
 OBJ_DIR=objs/
 DEP_DIR=deps/
 CC=c++
