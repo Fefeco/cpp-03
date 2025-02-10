@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 11:12:57 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/01/21 13:04:02 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/10 14:55:32 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	ScavTrap(std::string name);
 
 	ScavTrap(const ScavTrap &other);
-//	ScavTrap &operator=(const ScavTrap &other);
+	ScavTrap &operator=(const ScavTrap &other);
 
 	void guardGate(void);
 
