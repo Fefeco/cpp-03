@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 11:16:52 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/11 11:15:10 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/11 13:45:07 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ int main(void) {
 
 	std::cout << std::endl;
 	printTestHeader("Creating ScavTrap robot");
-	//std::cout << "Creating ScavTrap robot" << std::endl;
 	ScavTrap ply1("Robot");
 	std::cout << std::endl;
 	

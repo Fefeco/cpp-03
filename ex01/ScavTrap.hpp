@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 11:12:57 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/10 14:55:32 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/11 12:39:38 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,5 @@ public:
 	ScavTrap &operator=(const ScavTrap &other);
 
 	void guardGate(void);
-
-//private:
-//  std::string _name;
-//  unsigned int _hitPoints;
-//  unsigned int _energyPoints;
-//  unsigned int _attackDamage;
+	void attack(const std::string& target);
 };
