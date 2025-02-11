@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 10:40:25 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/10 15:34:23 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/11 10:14:44 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,25 +62,22 @@ void ScavTrap::guardGate(void)
 
 void ScavTrap::attack(const std::string &target) {
 
-  if (!this->_energyPoints) {
-    std::cout << "ClapTrap " << this->_name
+  if (!_energyPoints) {
+    std::cout << "ScavTrap " << _name
               << " can't attack. No energy points left." << std::endl;
     return;
   }
 
-  if (!this->_attackDamage) {
-    std::cout << "ClapTrap " << this->_name
+  if (!_attackDamage) {
+    std::cout << "ScavTrap " << _name
               << " can't attack nobody without attack damage points"
               << std::endl;
     return;
   }
 
-  std::cout << "ClapTrap " << this->_name << " attacks " << target
-            << ", causing " << this->_attackDamage << " points of damage!"
+  std::cout << "ScavTrap " << _name << " attacks " << target
+            << ", causing " << _attackDamage << " points of damage!"
             << std::endl;
 
-  --this->_energyPoints;
-}
-std::string	&ScavTrap::attack(std::string name)
-{
+  --_energyPoints;
 }
