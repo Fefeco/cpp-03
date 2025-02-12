@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 10:40:25 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/12 19:11:38 by fedeito          ###   ########.fr       */
+/*   Updated: 2025/02/12 19:39:15 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 /*
 * Constructors
  */
-ScavTrap::ScavTrap(void) : ClapTrap::ClapTrap("Unnamed", 100, 50, 20)
+ScavTrap::ScavTrap(void) : ClapTrap("Unnamed", 100, 50, 20)
 {
   std::cout << "ScavTrap default constructor called" << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name, 100, 50, 20)
 {
   std::cout << "ScavTrap constructor called for " << _name << std::endl;
 }
