@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 11:16:52 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/11 14:27:47 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/12 20:23:37 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ int main(void) {
 */
 	FragTrap ply1;
 	std::cout << "ply1 name: " << ply1.getName() << std::endl;
+	ply1.highFiveGuys();
 	printTestHeader("Destroy objects");
 	return 0;
 }

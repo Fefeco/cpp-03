@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 14:04:53 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/12 15:20:17 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/12 20:22:28 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,17 @@
 #include <iostream>
 #include "FragTrap.hpp"
 #include "ClapTrap.hpp"
+#include <cstdio>
 
 /*
 * Constructors
  */
-FragTrap::FragTrap(void) : ClapTrap::ClapTrap("FragTrap")
+FragTrap::FragTrap(void) : ClapTrap("FragTrap", 100, 100, 30)
 {
   std::cout << "FragTrap default constructor called" << std::endl;
 }
 
-FragTrap::FragTrap(std::string &name) : ClapTrap(name)
+FragTrap::FragTrap(std::string &name) : ClapTrap(name, 100, 100, 30)
 {
   std::cout << "FragTrap constructor called for " << _name << std::endl;
 }
@@ -54,3 +55,14 @@ FragTrap &FragTrap::operator=(const FragTrap &other)
   return *this;
 }
 
+/*
+* Member functions
+ */
+void FragTrap::highFiveGuys(void)
+{
+	std::cout << "FragTrap " << _name
+			  << " rises its hand requesting a high fives" << std::endl
+			  << "PRESS ENTER TO HIGH FIVE" << std::endl;
+	getchar();
+	std::cout << "CLAP!" << std::endl;
+}
