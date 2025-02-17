@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 14:04:53 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/12 20:22:28 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/17 11:16:51 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ FragTrap::FragTrap(void) : ClapTrap("FragTrap", 100, 100, 30)
   std::cout << "FragTrap default constructor called" << std::endl;
 }
 
-FragTrap::FragTrap(std::string &name) : ClapTrap(name, 100, 100, 30)
+FragTrap::FragTrap(std::string name) : ClapTrap(name, 100, 100, 30)
 {
   std::cout << "FragTrap constructor called for " << _name << std::endl;
 }
@@ -58,11 +58,21 @@ FragTrap &FragTrap::operator=(const FragTrap &other)
 /*
 * Member functions
  */
-void FragTrap::highFiveGuys(void)
+void FragTrap::highFivesGuys(void)
 {
 	std::cout << "FragTrap " << _name
 			  << " rises its hand requesting a high fives" << std::endl
 			  << "PRESS ENTER TO HIGH FIVE" << std::endl;
 	getchar();
 	std::cout << "CLAP!" << std::endl;
+}
+
+/*
+* Extra functions
+ */
+void FragTrap::getInfo(void) {
+	std::cout << "FragTrap: " << _name << std::endl
+			  << "Hit points: " << _hitPoints << std::endl
+			  << "Energy points: " << _energyPoints << std::endl
+			  << "Attack damage: " << _attackDamage << std::endl;
 }

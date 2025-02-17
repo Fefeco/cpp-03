@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 11:16:52 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/12 20:23:37 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/17 12:12:08 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,41 +29,23 @@ void printSubtitle(const std::string& message) {
 }
 
 int main(void) {
+	std::cout << std::endl;
+	printTestHeader("Create Clap and FragTraps");
+	ClapTrap clap1;
+	ClapTrap clap2("clap2");
+	FragTrap frag1;
+	FragTrap frag2("frag2");
 
-	/*std::cout << std::endl;
-	printTestHeader("Creating ScavTrap robot");
-	ScavTrap ply1("Robot");
 	std::cout << std::endl;
-	
-	printTestHeader("Creating other ScavTrap robot by copying the existing one");
-	ScavTrap ply2(ply1);
+	printTestHeader("Test attack");
+	frag2.attack(clap2.getName());
+	printTestHeader("Print info before assignment operator call");
+	frag2.getInfo();
+	frag1 = frag2;
 	std::cout << std::endl;
-
-	printTestHeader("Testing attack form Scavtrap 1 to Scavtrap 2");
-	std::cout << "ScavTrap 1 Energy: " << ply1.getEnergyPoints() << std::endl;
-	ply1.attack(ply2.getName());
-	std::cout << "ScavTrap 1 Energy: " << ply1.getEnergyPoints() << std::endl;
-	std::cout << std::endl;
-
-	printTestHeader("Testing copy asignment operator");
-	printSubtitle("Create an instance with default constructor");
-	ScavTrap ply3;
-	std::cout << "ScavTrap 3 name: " << ply3.getName() << std::endl;
-	std::cout << "ScavTrap 3 enrgy: " << ply3.getEnergyPoints() << std::endl;
-	printSubtitle("Using asignment operator to clone the second ScavTrap");
-	ply3 = ply1;
-	std::cout << "ScavTrap 3 name: " << ply3.getName() << std::endl;
-	std::cout << "ScavTrap 3 enrgy: " << ply3.getEnergyPoints() << std::endl;
-	std::cout << std::endl;
-
-	printTestHeader("Testing guard gate state");
-	std::cout << "ScavTrap 3 name: " << ply3.getName() << std::endl;
-	ply3.guardGate();
-	std::cout << std::endl;
-*/
-	FragTrap ply1;
-	std::cout << "ply1 name: " << ply1.getName() << std::endl;
-	ply1.highFiveGuys();
-	printTestHeader("Destroy objects");
+	printTestHeader("Print info after");
+	frag1.getInfo();
+	printTestHeader("Test high fives");
+	frag1.highFivesGuys();
 	return 0;
 }

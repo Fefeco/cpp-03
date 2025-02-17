@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 10:40:25 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/12 19:39:15 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/17 11:20:00 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 /*
 * Constructors
  */
-ScavTrap::ScavTrap(void) : ClapTrap("Unnamed", 100, 50, 20)
+ScavTrap::ScavTrap(void) : ClapTrap("Scavtrap", 100, 50, 20)
 {
   std::cout << "ScavTrap default constructor called" << std::endl;
 }
@@ -58,7 +58,7 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &other)
  */
 void ScavTrap::guardGate(void)
 {
-	std::cout << "ScavTrap " << getName() << " is now in Gate keeper mode"
+	std::cout << "ScavTrap " << _name << " is now in Gate keeper mode"
 			  << std::endl;
 }
 
