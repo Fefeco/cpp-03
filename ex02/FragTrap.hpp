@@ -6,9 +6,11 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 14:05:08 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/17 11:14:12 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/17 14:02:12 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#pragma once
 
 #include <string>
 #include "ClapTrap.hpp"
