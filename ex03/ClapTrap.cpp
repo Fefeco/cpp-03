@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 10:52:09 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/12 18:53:26 by fedeito          ###   ########.fr       */
+/*   Updated: 2025/02/18 14:50:26 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,23 @@
 #include <iostream>
 
 /*
+* Default values
+ */
+const std::string ClapTrap::_defName = "NoName";
+const unsigned int ClapTrap::_defHP = 10;
+const unsigned int ClapTrap::_defEP = 10;
+const unsigned int ClapTrap::_defAD = 0;
+
+/*
 * Constructors
  */
 ClapTrap::ClapTrap(void)
-    : _name("Unnamed"), _hitPoints(10), _energyPoints(10), _attackDamage(0) {
+    : _name(_defName), _hitPoints(_defHP), _energyPoints(_defEP), _attackDamage(_defAD) {
   std::cout << "Default constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name)
-    : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0) {
+    : _name(name), _hitPoints(_defHP), _energyPoints(_defEP), _attackDamage(_defAD) {
   std::cout << "Constructor called for " << _name << std::endl;
 }
 
@@ -40,14 +48,12 @@ ClapTrap::ClapTrap(const ClapTrap &other)
   std::cout << "Copy constructor called" << std::endl;
 }
 
-
 /*
 * Destructor
  */
 ClapTrap::~ClapTrap(void) {
   std::cout << "Destructor for " << _name << " called" << std::endl;
 }
-
 
 /*
 * Assignment operator overload
@@ -66,7 +72,6 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &other) {
   return *this;
 }
 
-
 /*
 * Getters
  */
@@ -82,7 +87,6 @@ unsigned int ClapTrap::getAttackDamage(void) const {
   return _attackDamage;
 }
 
-
 /*
 * Setter
  */
@@ -91,7 +95,6 @@ void ClapTrap::setAttackDamage(unsigned int points) {
             << points << " points" << std::endl;
   _attackDamage = points;
 }
-
 
 /*
 * Mandatory member functions

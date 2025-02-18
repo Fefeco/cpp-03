@@ -6,7 +6,7 @@
 /*   By: fedeito <fcarranz@student.42barcel>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 20:23:31 by fedeito           #+#    #+#             */
-/*   Updated: 2025/02/17 14:26:30 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/18 14:46:20 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,9 @@ protected:
   unsigned int _hitPoints;
   unsigned int _energyPoints;
   unsigned int _attackDamage;
+
+  static const std::string _defName;
+  static const unsigned int _defHP;
+  static const unsigned int _defEP;
+  static const unsigned int _defAD;
 };
