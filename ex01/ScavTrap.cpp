@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 10:40:25 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/19 11:48:24 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/19 12:08:34 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,27 +24,23 @@ const unsigned int ScavTrap::_defAD = 20;
 /*
 * Constructors
  */
-ScavTrap::ScavTrap(void)
-  : ClapTrap(_defName, _defHP, _defEP, _defAD), guardGateMode(false)
+ScavTrap::ScavTrap(void) : ClapTrap(_defName, _defHP, _defEP, _defAD)
 {
   std::cout << "ScavTrap default constructor called" << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name)
-  : ClapTrap(name, _defHP, _defEP, _defAD), guardGateMode(false)
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name, _defHP, _defEP, _defAD)
 {
-  guardGateMode = false;
   std::cout << "ScavTrap constructor called for " << _name << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name, unsigned int hp, unsigned int ep, unsigned int ad)
-  : ClapTrap(name, hp, ep, ad), guardGateMode(false)
+  : ClapTrap(name, hp, ep, ad)
 {
   std::cout << "Constructor called for " << _name << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &other)
-  : ClapTrap(other), guardGateMode(other.guardGateMode)
+ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
 {
   std::cout << "ScavTrap copy constructor called" << std::endl;
 }
@@ -65,7 +61,6 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &other)
 
   if (this != &other) {
 	ClapTrap::operator=(other);
-    guardGateMode = other.guardGateMode;
   }
 
   return *this;
@@ -98,11 +93,5 @@ void ScavTrap::attack(const std::string &target) {
 
 void ScavTrap::guardGate(void)
 {
-  if (guardGateMode)
-	  std::cout << "ScavTrap " << _name << " already in Gate keeper mode" << std::endl;
-  else
-  {
-    guardGateMode = true;
-    std::cout << "ScavTrap " << _name << " is now in Gate keeper mode" << std::endl;
-  }
+  std::cout << "ScavTrap " << _name << " is now in Gate keeper mode" << std::endl;
 }

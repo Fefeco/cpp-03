@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 11:12:57 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/19 11:29:46 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/19 12:06:23 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,4 @@ protected:
   static const unsigned int _defHP;
   static const unsigned int _defEP;
   static const unsigned int _defAD;
-
-private:
-  bool guardGateMode;
 };
