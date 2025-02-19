@@ -6,26 +6,32 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 14:05:08 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/17 14:02:12 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/19 12:25:56 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-
 #include <string>
 #include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap {
+class FragTrap : virtual public ClapTrap {
 
 public:
-	FragTrap(void);
-	FragTrap(std::string name);
-	FragTrap(const FragTrap &other);
+  FragTrap(void);
+  FragTrap(std::string name);
+  FragTrap(const FragTrap &other);
+  FragTrap(std::string name, unsigned int hp, unsigned int ep, unsigned int ad);
 
-	FragTrap &operator=(const FragTrap &other);
+  FragTrap &operator=(const FragTrap &other);
 
-	~FragTrap(void);
+  ~FragTrap(void);
 
-	void highFivesGuys(void);
-	void getInfo(void);
+  void highFivesGuys(void);
+  void getInfo(void);
+
+protected:
+  static const std::string _defName;
+  static const unsigned int _defHP;
+  static const unsigned int _defEP;
+  static const unsigned int _defAD;
 };
