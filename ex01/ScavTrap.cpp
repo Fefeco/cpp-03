@@ -6,29 +6,46 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 10:40:25 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/12 19:39:15 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/19 11:48:24 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-
 #include "ScavTrap.hpp"
+
+/*
+* Default values
+ */
+const std::string ScavTrap::_defName = "ScavTrap";
+const unsigned int ScavTrap::_defHP = 100;
+const unsigned int ScavTrap::_defEP = 50;
+const unsigned int ScavTrap::_defAD = 20;
 
 /*
 * Constructors
  */
-ScavTrap::ScavTrap(void) : ClapTrap("Unnamed", 100, 50, 20)
+ScavTrap::ScavTrap(void)
+  : ClapTrap(_defName, _defHP, _defEP, _defAD), guardGateMode(false)
 {
   std::cout << "ScavTrap default constructor called" << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name, 100, 50, 20)
+ScavTrap::ScavTrap(std::string name)
+  : ClapTrap(name, _defHP, _defEP, _defAD), guardGateMode(false)
 {
+  guardGateMode = false;
   std::cout << "ScavTrap constructor called for " << _name << std::endl;
 }
 
+ScavTrap::ScavTrap(std::string name, unsigned int hp, unsigned int ep, unsigned int ad)
+  : ClapTrap(name, hp, ep, ad), guardGateMode(false)
+{
+  std::cout << "Constructor called for " << _name << std::endl;
+}
+
 ScavTrap::ScavTrap(const ScavTrap &other)
-    : ClapTrap(other){
+  : ClapTrap(other), guardGateMode(other.guardGateMode)
+{
   std::cout << "ScavTrap copy constructor called" << std::endl;
 }
 
@@ -48,6 +65,7 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &other)
 
   if (this != &other) {
 	ClapTrap::operator=(other);
+    guardGateMode = other.guardGateMode;
   }
 
   return *this;
@@ -56,12 +74,6 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &other)
 /*
 * Member functions
  */
-void ScavTrap::guardGate(void)
-{
-	std::cout << "ScavTrap " << getName() << " is now in Gate keeper mode"
-			  << std::endl;
-}
-
 void ScavTrap::attack(const std::string &target) {
 
   if (!_energyPoints) {
@@ -82,4 +94,15 @@ void ScavTrap::attack(const std::string &target) {
             << std::endl;
 
   --_energyPoints;
+}
+
+void ScavTrap::guardGate(void)
+{
+  if (guardGateMode)
+	  std::cout << "ScavTrap " << _name << " already in Gate keeper mode" << std::endl;
+  else
+  {
+    guardGateMode = true;
+    std::cout << "ScavTrap " << _name << " is now in Gate keeper mode" << std::endl;
+  }
 }
