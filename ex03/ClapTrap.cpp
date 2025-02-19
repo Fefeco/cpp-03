@@ -6,18 +6,17 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 10:52:09 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/18 14:50:26 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/19 11:23:03 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
-
 #include <iostream>
 
 /*
 * Default values
  */
-const std::string ClapTrap::_defName = "NoName";
+const std::string ClapTrap::_defName = "ClapTrapNoName";
 const unsigned int ClapTrap::_defHP = 10;
 const unsigned int ClapTrap::_defEP = 10;
 const unsigned int ClapTrap::_defAD = 0;
@@ -26,25 +25,25 @@ const unsigned int ClapTrap::_defAD = 0;
 * Constructors
  */
 ClapTrap::ClapTrap(void)
-    : _name(_defName), _hitPoints(_defHP), _energyPoints(_defEP), _attackDamage(_defAD) {
+  : _name(_defName), _hitPoints(_defHP), _energyPoints(_defEP), _attackDamage(_defAD) {
   std::cout << "Default constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name)
-    : _name(name), _hitPoints(_defHP), _energyPoints(_defEP), _attackDamage(_defAD) {
+  : _name(name), _hitPoints(_defHP), _energyPoints(_defEP), _attackDamage(_defAD) {
   std::cout << "Constructor called for " << _name << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name, unsigned int hp, unsigned int ep, unsigned int ad)
-	: _name(name), _hitPoints(hp), _energyPoints(ep), _attackDamage(ad)
+  : _name(name), _hitPoints(hp), _energyPoints(ep), _attackDamage(ad)
 {
   std::cout << "Constructor called for " << _name << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &other)
-    : _name(other.getName()), _hitPoints(other.getHitPoints()),
-      _energyPoints(other.getEnergyPoints()),
-      _attackDamage(other.getAttackDamage()) {
+  : _name(other.getName()), _hitPoints(other.getHitPoints()),
+  _energyPoints(other.getEnergyPoints()),
+  _attackDamage(other.getAttackDamage()) {
   std::cout << "Copy constructor called" << std::endl;
 }
 
@@ -63,10 +62,10 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &other) {
   std::cout << "Copy assignment operator called" << std::endl;
 
   if (this != &other) {
-    _name = other.getName();
-    _hitPoints = other.getHitPoints();
-    _energyPoints = other.getEnergyPoints();
-    _attackDamage = other.getAttackDamage();
+     _name = other.getName();
+     _hitPoints = other.getHitPoints();
+     _energyPoints = other.getEnergyPoints();
+     _attackDamage = other.getAttackDamage();
   }
 
   return *this;

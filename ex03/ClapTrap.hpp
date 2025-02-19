@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fedeito <fcarranz@student.42barcel>        +#+  +:+       +#+        */
+/*   By: fcarranz <fcarranz@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/15 20:23:31 by fedeito           #+#    #+#             */
-/*   Updated: 2025/02/18 14:46:20 by fcarranz         ###   ########.fr       */
+/*   Created: 2025/01/15 20:23:31 by fcarranz          #+#    #+#             */
+/*   Updated: 2025/02/19 11:53:32 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ public:
   ClapTrap(std::string name);
   ClapTrap(const ClapTrap &other);
   ClapTrap(std::string name, unsigned int hp, unsigned int ep, unsigned int ad);
+
   ClapTrap &operator=(const ClapTrap &other);
 
   ~ClapTrap(void);
