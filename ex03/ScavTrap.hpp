@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 11:12:57 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/19 12:06:23 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/19 14:17:02 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,9 @@ public:
 
   ~ScavTrap(void);
 
-  void attack(const std::string& target);
   void guardGate(void);
+
+  const std::string getClassName(void) const;
 
 protected:
   static const std::string _defName;

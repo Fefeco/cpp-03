@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 14:05:08 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/19 12:25:56 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/19 14:16:47 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,11 @@ public:
 
   void highFivesGuys(void);
   void getInfo(void);
+  const std::string getClassName(void) const;
 
 protected:
   static const std::string _defName;
+  static const std::string _className;
   static const unsigned int _defHP;
   static const unsigned int _defEP;
   static const unsigned int _defAD;

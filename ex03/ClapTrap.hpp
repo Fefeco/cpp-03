@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 20:23:31 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/19 11:53:32 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/20 21:21:41 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ public:
   unsigned int getAttackDamage(void) const;
 
   void setAttackDamage(unsigned int points);
+
+  virtual const std::string getClassName(void) const;
 
 protected:
   std::string _name;

@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 11:16:52 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/17 14:40:29 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/20 21:13:55 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,27 @@ void printSubtitle(const std::string& message) {
 int main(void) {
 	std::cout << std::endl;
 	printTestHeader("Create DiamondTrap");
-	DiamondTrap d1("Diamond");
+	DiamondTrap d1("Henry");
+	DiamondTrap d2;
+
+	std::cout << std::endl;
+	printTestHeader("Create ScavTrap");
+	ScavTrap s1;
 
 	std::cout << std::endl;
 	printTestHeader("Test attack");
 	d1.attack("Somebody");
-	printTestHeader("Print info before assignment operator call");
-	d1.getInfo();
+	s1.attack("someone else");
+	//std::cout << std::endl;
+	//printTestHeader("Print info before assignment operator call");
+	//d1.getInfo();
+	//std::cout << std::endl;
+	//printTestHeader("Test high fives");
+	
 	std::cout << std::endl;
-	printTestHeader("Test high fives");
+	printTestHeader("Class Name");
+	d1.whoAmI();
+	d2.whoAmI();
+	std::cout << std::endl;
 	return 0;
 }

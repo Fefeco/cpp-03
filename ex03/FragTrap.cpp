@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 14:04:53 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/19 12:48:27 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/19 13:59:51 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 * Default values
  */
 const std::string FragTrap::_defName = "FragTrap";
+const std::string FragTrap::_className = "FragTrap ";
 const unsigned int FragTrap::_defHP = 100;
 const unsigned int FragTrap::_defEP = 100;
 const unsigned int FragTrap::_defAD = 30;
@@ -71,7 +72,7 @@ FragTrap &FragTrap::operator=(const FragTrap &other)
 }
 
 /*
-* Member functions
+* Mandatory member functions
  */
 void FragTrap::highFivesGuys(void)
 {
@@ -91,3 +92,5 @@ void FragTrap::getInfo(void) {
             << "Energy points: " << _energyPoints << std::endl
             << "Attack damage: " << _attackDamage << std::endl;
 }
+
+const std::string FragTrap::getClassName(void) const { return _className; }

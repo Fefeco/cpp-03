@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 10:40:25 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/19 12:08:34 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/19 14:13:37 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,29 +69,9 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &other)
 /*
 * Member functions
  */
-void ScavTrap::attack(const std::string &target) {
-
-  if (!_energyPoints) {
-    std::cout << "ScavTrap " << _name
-              << " can't attack. No energy points left." << std::endl;
-    return;
-  }
-
-  if (!_attackDamage) {
-    std::cout << "ScavTrap " << _name
-              << " can't attack nobody without attack damage points"
-              << std::endl;
-    return;
-  }
-
-  std::cout << "ScavTrap " << _name << " attacks " << target
-            << ", causing " << _attackDamage << " points of damage!"
-            << std::endl;
-
-  --_energyPoints;
-}
-
 void ScavTrap::guardGate(void)
 {
   std::cout << "ScavTrap " << _name << " is now in Gate keeper mode" << std::endl;
 }
+
+const std::string ScavTrap::getClassName(void) const { return "ScavTrap "; }
