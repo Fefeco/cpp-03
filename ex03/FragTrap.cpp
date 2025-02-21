@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 14:04:53 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/19 13:59:51 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/21 13:55:38 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 * Default values
  */
 const std::string FragTrap::_defName = "FragTrap";
-const std::string FragTrap::_className = "FragTrap ";
 const unsigned int FragTrap::_defHP = 100;
 const unsigned int FragTrap::_defEP = 100;
 const unsigned int FragTrap::_defAD = 30;
@@ -74,6 +73,28 @@ FragTrap &FragTrap::operator=(const FragTrap &other)
 /*
 * Mandatory member functions
  */
+void FragTrap::attack(const std::string &target) {
+
+  if (!_energyPoints) {
+    std::cout << FragTrap::getClassName() << " " << _name
+              << " can't attack. No energy points left." << std::endl;
+    return;
+  }
+
+  if (!_attackDamage) {
+    std::cout << FragTrap::getClassName() << " " << _name
+              << " can't attack nobody without attack damage points"
+              << std::endl;
+    return;
+  }
+
+  std::cout << FragTrap::getClassName() << " " << _name << " attacks " << target
+            << ", causing " << _attackDamage << " points of damage!"
+            << std::endl;
+
+  --_energyPoints;
+}
+
 void FragTrap::highFivesGuys(void)
 {
   std::cout << "FragTrap " << _name
@@ -93,4 +114,4 @@ void FragTrap::getInfo(void) {
             << "Attack damage: " << _attackDamage << std::endl;
 }
 
-const std::string FragTrap::getClassName(void) const { return _className; }
+const std::string FragTrap::getClassName(void) const { return "FragTrap"; }

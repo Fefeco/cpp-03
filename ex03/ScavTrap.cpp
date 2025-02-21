@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 10:40:25 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/19 14:13:37 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/21 13:52:16 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,4 +74,4 @@ void ScavTrap::guardGate(void)
   std::cout << "ScavTrap " << _name << " is now in Gate keeper mode" << std::endl;
 }
 
-const std::string ScavTrap::getClassName(void) const { return "ScavTrap "; }
+const std::string ScavTrap::getClassName(void) const { return "ScavTrap"; }

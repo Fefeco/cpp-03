@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 12:26:11 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/20 21:02:08 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/21 13:49:53 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ private:
 
 protected:
   static const std::string _defName;
-  static const std::string _className;
   static const unsigned int _defHP;
   static const unsigned int _defEP;
   static const unsigned int _defAD;

@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 12:39:14 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/20 21:15:35 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/21 13:51:44 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 /*
 * Default values
  */
-const std::string DiamondTrap::_defName = "NoNameDiamond";
+const std::string DiamondTrap::_defName = "NoNameDiamondTrap";
 const unsigned int DiamondTrap::_defHP = FragTrap::_defHP;
 const unsigned int DiamondTrap::_defEP = ScavTrap::_defEP;
 const unsigned int DiamondTrap::_defAD = FragTrap::_defAD;
@@ -77,10 +77,7 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &other) {
 * Mandatory member functions
  */
 
-const std::string DiamondTrap::getClassName(void) const
-{
-	return FragTrap::getClassName();
-}
+const std::string DiamondTrap::getClassName(void) const { return "DiamondTrap"; }
 
 void DiamondTrap::whoAmI(void)
 {

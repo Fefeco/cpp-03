@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 11:16:52 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/20 21:13:55 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/21 13:43:48 by fcarranz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,18 @@ int main(void) {
 	printTestHeader("Create ScavTrap");
 	ScavTrap s1;
 
+    std::cout << std::endl;
+    printTestHeader("Create FragTrap");
+    FragTrap f1;
+
 	std::cout << std::endl;
 	printTestHeader("Test attack");
 	d1.attack("Somebody");
 	s1.attack("someone else");
+	f1.attack("someone else");
+	d1.setAttackDamage(33);
+	s1.setAttackDamage(33);
+	f1.setAttackDamage(33);
 	//std::cout << std::endl;
 	//printTestHeader("Print info before assignment operator call");
 	//d1.getInfo();
