@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 11:16:52 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/21 13:43:48 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/25 13:11:31 by fedeito          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,21 +46,28 @@ int main(void) {
 	std::cout << std::endl;
 	printTestHeader("Test attack");
 	d1.attack("Somebody");
+	s1.setAttackDamage(53);
+	f1.setAttackDamage(13);
 	s1.attack("someone else");
 	f1.attack("someone else");
-	d1.setAttackDamage(33);
-	s1.setAttackDamage(33);
-	f1.setAttackDamage(33);
-	//std::cout << std::endl;
-	//printTestHeader("Print info before assignment operator call");
-	//d1.getInfo();
-	//std::cout << std::endl;
-	//printTestHeader("Test high fives");
-	
+
 	std::cout << std::endl;
-	printTestHeader("Class Name");
+	printTestHeader("Test whoAmI");
 	d1.whoAmI();
 	d2.whoAmI();
+
 	std::cout << std::endl;
+	printTestHeader("Print info before assignment operator call");
+	d1.getInfo();
+	d1 = d2;
+	d1.whoAmI();
+	d2.whoAmI();
+
+	std::cout << std::endl;
+	printTestHeader("Test high fives");
+	f1.highFivesGuys();
+	
+	std::cout << std::endl;
+    printTestHeader("Destructors");
 	return 0;
 }

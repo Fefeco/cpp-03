@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 10:52:09 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/21 13:55:05 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/25 13:16:07 by fedeito          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,32 +26,32 @@ const unsigned int ClapTrap::_defAD = 0;
  */
 ClapTrap::ClapTrap(void)
   : _name(_defName), _hitPoints(_defHP), _energyPoints(_defEP), _attackDamage(_defAD) {
-  std::cout << getClassName() << " " << "Default constructor called" << std::endl;
+  std::cout << "ClapTrap Default constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name)
   : _name(name), _hitPoints(_defHP), _energyPoints(_defEP), _attackDamage(_defAD) {
-  std::cout << getClassName() << " " << "Constructor called for " << _name << std::endl;
+  std::cout << "ClapTrap Constructor called for " << _name << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name, unsigned int hp, unsigned int ep, unsigned int ad)
   : _name(name), _hitPoints(hp), _energyPoints(ep), _attackDamage(ad)
 {
-  std::cout << getClassName() << " " << "Constructor called for " << _name << std::endl;
+  std::cout << "ClapTrap Constructor called for " << _name << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &other)
   : _name(other.getName()), _hitPoints(other.getHitPoints()),
   _energyPoints(other.getEnergyPoints()),
   _attackDamage(other.getAttackDamage()) {
-  std::cout << getClassName() << " " << "Copy constructor called" << std::endl;
+  std::cout << "ClapTrap Copy constructor called" << std::endl;
 }
 
 /*
 * Destructor
  */
 ClapTrap::~ClapTrap(void) {
-  std::cout << getClassName() << " " << "Destructor for " << _name << " called" << std::endl;
+  std::cout << "ClapTrap Destructor for " << _name << " called" << std::endl;
 }
 
 /*
@@ -59,7 +59,7 @@ ClapTrap::~ClapTrap(void) {
  */
 ClapTrap &ClapTrap::operator=(const ClapTrap &other) {
 
-  std::cout << getClassName() << " " << "Copy assignment operator called" << std::endl;
+  std::cout << "ClapTrap Copy assignment operator called" << std::endl;
 
   if (this != &other) {
      _name = other.getName();
@@ -148,4 +148,14 @@ void ClapTrap::beRepaired(unsigned int amount) {
 
   _hitPoints += amount;
   --_energyPoints;
+}
+
+/*
+* Extra functions
+ */
+void ClapTrap::getInfo(void) {
+  std::cout << getClassName() << " " << _name << std::endl
+            << "Hit points: " << _hitPoints << std::endl
+            << "Energy points: " << _energyPoints << std::endl
+            << "Attack damage: " << _attackDamage << std::endl;
 }

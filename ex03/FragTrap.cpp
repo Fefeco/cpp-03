@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 14:04:53 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/21 13:55:38 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/25 13:13:52 by fedeito          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,11 +107,4 @@ void FragTrap::highFivesGuys(void)
 /*
 * Extra functions
  */
-void FragTrap::getInfo(void) {
-  std::cout << "FragTrap: " << _name << std::endl
-            << "Hit points: " << _hitPoints << std::endl
-            << "Energy points: " << _energyPoints << std::endl
-            << "Attack damage: " << _attackDamage << std::endl;
-}
-
 const std::string FragTrap::getClassName(void) const { return "FragTrap"; }

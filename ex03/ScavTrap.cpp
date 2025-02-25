@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 10:40:25 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/21 13:52:16 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/25 13:18:16 by fedeito          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name, _defHP, _defEP, _defAD)
 ScavTrap::ScavTrap(std::string name, unsigned int hp, unsigned int ep, unsigned int ad)
   : ClapTrap(name, hp, ep, ad)
 {
-  std::cout << "Constructor called for " << _name << std::endl;
+  std::cout << "ScavTrap constructor called for " << _name << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)

@@ -6,7 +6,7 @@
 /*   By: fcarranz <fcarranz@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 14:05:08 by fcarranz          #+#    #+#             */
-/*   Updated: 2025/02/21 13:49:30 by fcarranz         ###   ########.fr       */
+/*   Updated: 2025/02/25 13:13:12 by fedeito          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ public:
 
   void attack(const std::string &target);
   void highFivesGuys(void);
-  void getInfo(void);
   const std::string getClassName(void) const;
 
 protected:
